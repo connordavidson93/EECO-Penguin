@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Penguin_Scene_Shot_1.ma
-//Last modified: Wed, Mar 27, 2019 02:50:17 PM
+//Last modified: Wed, Apr 03, 2019 11:15:11 AM
 //Codeset: 1252
 file -rdi 1 -ns "Penguin1" -rfn "PenguinRN1" -op "v=0;" -typ "mayaAscii" "C:/Users/annae/Desktop/Docs/School/Junior year/Marty/EECO Anims//Penguin.ma";
 file -rdi 1 -ns "Penguin2" -rfn "Penguin1RN" -typ "mayaAscii" "C:/Users/annae/Desktop/Docs/School/Junior year/Marty/EECO Anims//Penguin.ma";
@@ -11,7 +11,6 @@ file -r -ns "Penguin2" -dr 1 -rfn "Penguin1RN" -typ "mayaAscii" "C:/Users/annae/
 file -r -ns "Penguin" -dr 1 -rfn "PenguinRN" -op "v=0;" -typ "mayaAscii" "C:/Users/annae/Desktop/Docs/School/Junior year/Marty/EECO Anims//Penguin.ma";
 file -r -ns "Penguin3" -dr 1 -rfn "PenguinRN2" -typ "mayaAscii" "C:/Users/annae/Desktop/Docs/School/Junior year/Marty/EECO Anims//Penguin.ma";
 requires maya "2018";
-requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -23781,19 +23780,19 @@ createNode mesh -n "Where_ship_landsShape" -p "Where_ship_lands";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AB0792D4-465C-DC79-3719-1EA4B3EE3E14";
+	rename -uid "A423F107-4032-C1B2-2605-0A9FDD3F55CA";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DA61EF57-4EE5-A8AE-4EA1-D5A672C162DE";
+	rename -uid "65C92314-4ACD-04F8-2E65-6ABAC1BCC0D5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "78B11653-4D4E-4A82-4F4B-BB8C99B23B60";
+	rename -uid "49CBE7B5-46C4-0969-A227-AABB0837409C";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F9195156-46FC-0061-5C2B-4C9A9EEE4925";
+	rename -uid "DCCA8CE0-4711-1E44-7145-38A5AA45420A";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "232505B5-4509-E4F2-1E8D-618B68CAE291";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "0463A396-47A4-AFEA-A807-36834D905DF0";
+	rename -uid "90A5FF7F-4B49-D73C-A8F5-3ABA9C9A1DC3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E54D00F2-45FE-BCB4-6984-A28936D45965";
 	setAttr ".g" yes;
@@ -23812,7 +23811,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
-		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
+		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1119\n            -height 716\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
@@ -23839,8 +23838,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
 		+ "                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 716\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 716\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 716\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 716\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -24996,7 +24995,9 @@ createNode reference -n "PenguinRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PenguinRN1"
 		"PenguinRN1" 0
-		"PenguinRN1" 328
+		"PenguinRN1" 329
+		2 "|Penguin1:Penguin|Penguin1:Geometry|Penguin1:Penguin_Geo|Penguin1:Penguin_GeoShape" 
+		"visibility" " -k 0 1"
 		2 "|Penguin1:Penguin|Penguin1:Geometry|Penguin1:Penguin_Geo|Penguin1:Penguin_GeoShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|Penguin1:Penguin|Penguin1:Skeleton" "visibility" " 0"
@@ -25012,15 +25013,15 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl" 
-		"RLegIKFKSwitch" " -av -k 1 0"
+		"RLegIKFKSwitch" " -av -k 1 1"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl" 
-		"LLegIKFKSwitch" " -av -k 1 0"
+		"LLegIKFKSwitch" " -av -k 1 1"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl" 
-		"RFootIKFKSwitch" " -av -k 1 1"
+		"RFootIKFKSwitch" " -av -k 1 0"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl" 
-		"LFootIKFKSwitch" " -av -k 1 1"
+		"LFootIKFKSwitch" " -av -k 1 0"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:L_Leg_IK_PV_Ctrl_Grp|Penguin1:L_Leg_IK_PV_Ctrl" 
-		"translate" " -type \"double3\" 84.81717077487054723 145.49515617590193983 -13.31370485314855401"
+		"translate" " -type \"double3\" 1.9441107041468888 13.81576212968824713 -7.40398003477400835"
 		
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:L_Leg_IK_PV_Ctrl_Grp|Penguin1:L_Leg_IK_PV_Ctrl" 
 		"translateX" " -av"
@@ -25031,7 +25032,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:L_Leg_IK_03_Jnt_Ctrl_Grp|Penguin1:L_Leg_IK_03_Jnt_Ctrl" 
 		"visibility" " -av 1"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:L_Leg_IK_03_Jnt_Ctrl_Grp|Penguin1:L_Leg_IK_03_Jnt_Ctrl" 
-		"translate" " -type \"double3\" 20.92928434682085026 88.16298160403252382 -3.756552766922161"
+		"translate" " -type \"double3\" -0.07274661179906397 6.88727996678247045 -0.28356919520748419"
 		
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:L_Leg_IK_03_Jnt_Ctrl_Grp|Penguin1:L_Leg_IK_03_Jnt_Ctrl" 
 		"translateX" " -av"
@@ -25056,7 +25057,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:L_Leg_IK_03_Jnt_Ctrl_Grp|Penguin1:L_Leg_IK_03_Jnt_Ctrl" 
 		"scaleZ" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:R_Leg_IK_PV_Ctrl_Grp|Penguin1:R_Leg_IK_02_Jnt_Ctrl" 
-		"translate" " -type \"double3\" 84.56448652472010963 145.53521573683474344 -15.38275245042300554"
+		"translate" " -type \"double3\" 1.92442527572599342 13.8185261466592646 -7.40367296337692427"
 		
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:R_Leg_IK_PV_Ctrl_Grp|Penguin1:R_Leg_IK_02_Jnt_Ctrl" 
 		"translateX" " -av"
@@ -25065,7 +25066,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:R_Leg_IK_PV_Ctrl_Grp|Penguin1:R_Leg_IK_02_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:R_Leg_IK_03_Jnt_Ctrl_Grp|Penguin1:R_Leg_IK_03_Jnt_Ctrl" 
-		"translate" " -type \"double3\" 21.41051282075225259 95.03499132064511912 -4.30466082418621365"
+		"translate" " -type \"double3\" -3.14194008281141945 -10.03299226407406941 0.4879540519460927"
 		
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:IK|Penguin1:R_Leg_IK_03_Jnt_Ctrl_Grp|Penguin1:R_Leg_IK_03_Jnt_Ctrl" 
 		"translateX" " -av"
@@ -25079,7 +25080,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:FK|Penguin1:R_Leg_FK_01_Jnt_Ctrl_Grp" 
 		"visibility" " 1"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:FK|Penguin1:R_Leg_FK_01_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" 3.52207379973808088 -172.55643174115965621 247.04802379752740649"
+		"translate" " -type \"double3\" -6.45175238217461811 -22.26345866534905937 5.36411192443790696"
 		
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:FK|Penguin1:R_Leg_FK_01_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
@@ -25099,7 +25100,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:FK|Penguin1:R_Leg_FK_01_Jnt_Ctrl_Grp" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:FK|Penguin1:R_Leg_FK_01_Jnt_Ctrl_Grp|Penguin1:R_Leg_FK_01_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -360 0 -135.81218318987873772"
+		"rotate" " -type \"double3\" -720 0 0"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:FK|Penguin1:R_Leg_FK_01_Jnt_Ctrl_Grp|Penguin1:R_Leg_FK_01_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:FK|Penguin1:R_Leg_FK_01_Jnt_Ctrl_Grp|Penguin1:R_Leg_FK_01_Jnt_Ctrl" 
@@ -25109,8 +25110,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:COG_Jnt_Ctrl_Grp|Penguin1:COG_Jnt_Ctrl" 
 		"visibility" " -av 1"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:COG_Jnt_Ctrl_Grp|Penguin1:COG_Jnt_Ctrl" 
-		"translate" " -type \"double3\" 10.45838847488489165 -159.50254737710451991 251.16838852000873317"
-		
+		"translate" " -type \"double3\" 0.24182562235911848 0 5.8076779244379253"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:COG_Jnt_Ctrl_Grp|Penguin1:COG_Jnt_Ctrl" 
 		"translateX" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:COG_Jnt_Ctrl_Grp|Penguin1:COG_Jnt_Ctrl" 
@@ -25118,7 +25118,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:COG_Jnt_Ctrl_Grp|Penguin1:COG_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:COG_Jnt_Ctrl_Grp|Penguin1:COG_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 151.630854436126981 0 11.22435146638347092"
+		"rotate" " -type \"double3\" 0 0 -6.43080071734147207"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:COG_Jnt_Ctrl_Grp|Penguin1:COG_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:COG_Jnt_Ctrl_Grp|Penguin1:COG_Jnt_Ctrl" 
@@ -25156,7 +25156,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_02_Jnt_Ctrl_Grp|Penguin1:Spine_02_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_02_Jnt_Ctrl_Grp|Penguin1:Spine_02_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 -4.95489243273930846 -5.65902886231538105"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_02_Jnt_Ctrl_Grp|Penguin1:Spine_02_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_02_Jnt_Ctrl_Grp|Penguin1:Spine_02_Jnt_Ctrl" 
@@ -25176,7 +25176,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_02_Jnt_Ctrl_Grp|Penguin1:Spine_02_Jnt_Ctrl" 
 		"FollowRotate" " -av -k 1 1"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_03_Jnt_Ctrl_Grp|Penguin1:Spine_03_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 25.62122925200898038 -6.77876302083449378 0"
+		"rotate" " -type \"double3\" 7.17355843617399547 -6.77876302083449378 0"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_03_Jnt_Ctrl_Grp|Penguin1:Spine_03_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_03_Jnt_Ctrl_Grp|Penguin1:Spine_03_Jnt_Ctrl" 
@@ -25184,19 +25184,19 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_03_Jnt_Ctrl_Grp|Penguin1:Spine_03_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_04_Jnt_Ctrl_Grp|Penguin1:Spine_04_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 7.46288989655296398 0 9.51829678398182288"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_04_Jnt_Ctrl_Grp|Penguin1:Spine_04_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Spine_04_Jnt_Ctrl_Grp|Penguin1:Spine_04_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Neck_Jnt_Ctrl_Grp|Penguin1:Neck_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -63.69636018446873749 0 0"
+		"rotate" " -type \"double3\" -30.18286142516424775 0 0"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Neck_Jnt_Ctrl_Grp|Penguin1:Neck_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:Neck_Jnt_Ctrl_Grp|Penguin1:Neck_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:L_Wing_01_Jnt_Ctrl_Grp|Penguin1:L_Wing_01_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -16.05483009103069492 3.94983387859516633 -50.86845177957398079"
+		"rotate" " -type \"double3\" -16.05483009103069492 66.38601585525658777 44.17146424075910716"
 		
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:L_Wing_01_Jnt_Ctrl_Grp|Penguin1:L_Wing_01_Jnt_Ctrl" 
 		"rotateX" " -av"
@@ -25205,7 +25205,7 @@ createNode reference -n "PenguinRN1";
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:L_Wing_01_Jnt_Ctrl_Grp|Penguin1:L_Wing_01_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:R_Wing_01_Jnt_Ctrl_Grp|Penguin1:R_Wing_01_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 7.08736690803383507 21.10280341581265162 -25.22697796350664845"
+		"rotate" " -type \"double3\" -28.06704835691770228 52.87875880154500408 43.72284464015754679"
 		
 		2 "|Penguin1:Penguin|Penguin1:Controls|Penguin1:Transform_Ctrl_Grp|Penguin1:Transform_Ctrl|Penguin1:RK|Penguin1:R_Wing_01_Jnt_Ctrl_Grp|Penguin1:R_Wing_01_Jnt_Ctrl" 
 		"rotateX" " -av"
@@ -26814,7 +26814,9 @@ createNode reference -n "Penguin1RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Penguin1RN"
 		"Penguin1RN" 0
-		"Penguin1RN" 164
+		"Penguin1RN" 165
+		2 "|Penguin2:Penguin|Penguin2:Geometry|Penguin2:Penguin_Geo|Penguin2:Penguin_GeoShape" 
+		"visibility" " -k 0 1"
 		2 "|Penguin2:Penguin|Penguin2:Geometry|Penguin2:Penguin_Geo|Penguin2:Penguin_GeoShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl" 
@@ -26831,7 +26833,7 @@ createNode reference -n "Penguin1RN";
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:Spine_04_Jnt_Ctrl_Grp|Penguin2:Spine_04_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:Spine_04_Jnt_Ctrl_Grp|Penguin2:Spine_04_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 3.81194196543748065 -9.99902788135065634 0"
+		"rotate" " -type \"double3\" 0 -9.99902788135067233 0"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:Spine_04_Jnt_Ctrl_Grp|Penguin2:Spine_04_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:Spine_04_Jnt_Ctrl_Grp|Penguin2:Spine_04_Jnt_Ctrl" 
@@ -26847,7 +26849,7 @@ createNode reference -n "Penguin1RN";
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:Neck_Jnt_Ctrl_Grp|Penguin2:Neck_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:Neck_Jnt_Ctrl_Grp|Penguin2:Neck_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -2.05063465891652008 3.94704495791237564 0"
+		"rotate" " -type \"double3\" 0 -9.98877047239349203 0"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:Neck_Jnt_Ctrl_Grp|Penguin2:Neck_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:Neck_Jnt_Ctrl_Grp|Penguin2:Neck_Jnt_Ctrl" 
@@ -26855,15 +26857,15 @@ createNode reference -n "Penguin1RN";
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:Neck_Jnt_Ctrl_Grp|Penguin2:Neck_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:L_Wing_01_Jnt_Ctrl_Grp|Penguin2:L_Wing_01_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 -59.21211009170880146"
+		"rotate" " -type \"double3\" 0 0 -60.2368482872639035"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:L_Wing_01_Jnt_Ctrl_Grp|Penguin2:L_Wing_01_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:L_Wing_02_Jnt_Ctrl_Grp|Penguin2:L_Wing_02_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 -0.87841287316744054"
+		"rotate" " -type \"double3\" 0 0 -5.06313691762176088"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:L_Wing_02_Jnt_Ctrl_Grp|Penguin2:L_Wing_02_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:L_Wing_03_Jnt_Ctrl_Grp|Penguin2:L_Wing_03_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 0.77112497930836843"
+		"rotate" " -type \"double3\" 0 0 -5.0673020079698583"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:L_Wing_03_Jnt_Ctrl_Grp|Penguin2:L_Wing_03_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_01_Jnt_Ctrl_Grp|Penguin2:R_Wing_01_Jnt_Ctrl" 
@@ -26877,7 +26879,7 @@ createNode reference -n "Penguin1RN";
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_01_Jnt_Ctrl_Grp|Penguin2:R_Wing_01_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_01_Jnt_Ctrl_Grp|Penguin2:R_Wing_01_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 -54.82692323452948102"
+		"rotate" " -type \"double3\" 0 0 -52.65932771624942887"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_01_Jnt_Ctrl_Grp|Penguin2:R_Wing_01_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_01_Jnt_Ctrl_Grp|Penguin2:R_Wing_01_Jnt_Ctrl" 
@@ -26897,11 +26899,11 @@ createNode reference -n "Penguin1RN";
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_01_Jnt_Ctrl_Grp|Penguin2:R_Wing_01_Jnt_Ctrl" 
 		"FollowRotate" " -av -k 1 1"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_02_Jnt_Ctrl_Grp|Penguin2:R_Wing_02_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 -3.31627599537812179"
+		"rotate" " -type \"double3\" 0 0 -11.34187779702680388"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_02_Jnt_Ctrl_Grp|Penguin2:R_Wing_02_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_03_Jnt_Ctrl_Grp|Penguin2:R_Wing_03_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 -1.08407914283882589"
+		"rotate" " -type \"double3\" 0 0 -6.58671627931050896"
 		2 "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:R_Wing_03_Jnt_Ctrl_Grp|Penguin2:R_Wing_03_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		5 4 "Penguin1RN" "|Penguin2:Penguin|Penguin2:Controls|Penguin2:Transform_Ctrl_Grp|Penguin2:Transform_Ctrl|Penguin2:RK|Penguin2:COG_Jnt_Ctrl_Grp|Penguin2:COG_Jnt_Ctrl.FollowTranslate" 
@@ -28444,34 +28446,35 @@ createNode reference -n "PenguinRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PenguinRN"
 		"PenguinRN" 0
-		"PenguinRN" 152
+		"PenguinRN" 153
+		2 "|Penguin:Penguin|Penguin:Geometry|Penguin:Penguin_Geo|Penguin:Penguin_GeoShape" 
+		"visibility" " -k 0 1"
 		2 "|Penguin:Penguin|Penguin:Geometry|Penguin:Penguin_Geo|Penguin:Penguin_GeoShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl" 
 		"translate" " -type \"double3\" -55.8106953091514697 0 -300.20827059746335408"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Spine_02_Jnt_Ctrl_Grp|Penguin:Spine_02_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 11.29287139198098977 0 0"
+		"rotate" " -type \"double3\" 23.89075013416814386 0 0"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Spine_02_Jnt_Ctrl_Grp|Penguin:Spine_02_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Spine_03_Jnt_Ctrl_Grp|Penguin:Spine_03_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -4.58347345190349476 0 0"
+		"rotate" " -type \"double3\" 16.94414322882310486 0 0"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Spine_03_Jnt_Ctrl_Grp|Penguin:Spine_03_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Spine_04_Jnt_Ctrl_Grp|Penguin:Spine_04_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -2.19748462760325713 6.41557439717719014 0"
+		"rotate" " -type \"double3\" 18.8185182493286014 35.90050006186574194 0"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Spine_04_Jnt_Ctrl_Grp|Penguin:Spine_04_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Spine_04_Jnt_Ctrl_Grp|Penguin:Spine_04_Jnt_Ctrl" 
 		"rotateY" " -av"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Neck_Jnt_Ctrl_Grp|Penguin:Neck_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -4.02918459035546839 -16.47574428483541098 0"
+		"rotate" " -type \"double3\" 43.43896407178370822 18.51785424827692594 0"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Neck_Jnt_Ctrl_Grp|Penguin:Neck_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:Neck_Jnt_Ctrl_Grp|Penguin:Neck_Jnt_Ctrl" 
 		"rotateY" " -av"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:L_Wing_01_Jnt_Ctrl_Grp|Penguin:L_Wing_01_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 13.46783795881872869 2.75508472395132342 -54.29429083065665651"
-		
+		"rotate" " -type \"double3\" 0 -34.54197765502057393 -35.62862231166934635"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:L_Wing_01_Jnt_Ctrl_Grp|Penguin:L_Wing_01_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:L_Wing_01_Jnt_Ctrl_Grp|Penguin:L_Wing_01_Jnt_Ctrl" 
@@ -28479,8 +28482,7 @@ createNode reference -n "PenguinRN";
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:L_Wing_01_Jnt_Ctrl_Grp|Penguin:L_Wing_01_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:R_Wing_01_Jnt_Ctrl_Grp|Penguin:R_Wing_01_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 11.82097034790616874 9.67777903596724443 -50.52809100378346585"
-		
+		"rotate" " -type \"double3\" 0 -32.54843614359808157 -49.4031708259584974"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:R_Wing_01_Jnt_Ctrl_Grp|Penguin:R_Wing_01_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin:Penguin|Penguin:Controls|Penguin:Transform_Ctrl_Grp|Penguin:Transform_Ctrl|Penguin:RK|Penguin:R_Wing_01_Jnt_Ctrl_Grp|Penguin:R_Wing_01_Jnt_Ctrl" 
@@ -29464,10 +29466,12 @@ createNode reference -n "PenguinRN2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PenguinRN2"
 		"PenguinRN2" 0
-		"PenguinRN2" 1386
+		"PenguinRN2" 1387
 		2 "|Penguin3:Penguin" "translate" " -type \"double3\" 0 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Geometry" "translate" " -type \"double3\" 0 0 0"
 		
+		2 "|Penguin3:Penguin|Penguin3:Geometry|Penguin3:Penguin_Geo|Penguin3:Penguin_GeoShape" 
+		"visibility" " -k 0 1"
 		2 "|Penguin3:Penguin|Penguin3:Geometry|Penguin3:Penguin_Geo|Penguin3:Penguin_GeoShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|Penguin3:Penguin|Penguin3:Skeleton" "translate" " -type \"double3\" 0 0 0"
@@ -29497,7 +29501,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt" 
-		"translate" " -type \"double3\" 10.33301593903299676 0 0"
+		"translate" " -type \"double3\" 10.33301593903298787 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt" 
@@ -29505,8 +29509,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:Spine_04_Jnt" 
-		"translate" " -type \"double3\" 7.9018577643310195 -0.46756281056389071 -0.52168900234130433"
-		
+		"translate" " -type \"double3\" 7.90525784887005933 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:Spine_04_Jnt" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:Spine_04_Jnt" 
@@ -29514,7 +29517,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:Spine_04_Jnt" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:Spine_04_Jnt|Penguin3:Neck_Jnt" 
-		"translate" " -type \"double3\" 6.09550551724987955 0 0"
+		"translate" " -type \"double3\" 6.09550551724996126 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:Spine_04_Jnt|Penguin3:Neck_Jnt" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:Spine_04_Jnt|Penguin3:Neck_Jnt" 
@@ -29554,7 +29557,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:Spine_04_Jnt|Penguin3:Spine_04_Jnt_scaleConstraint1" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:L_Wing_01_Jnt" 
-		"translate" " -type \"double3\" -2.01457981206881698 -0.60632928241187756 12.28518772125232772"
+		"translate" " -type \"double3\" -1.43991342599142413 -0.61967162504595308 12.28518772125255509"
 		
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:L_Wing_01_Jnt" 
 		"translateX" " -av"
@@ -29563,7 +29566,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:L_Wing_01_Jnt" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:L_Wing_01_Jnt|Penguin3:L_Wing_02_Jnt" 
-		"translate" " -type \"double3\" 13.46208759257001475 0 0"
+		"translate" " -type \"double3\" 13.4620875925700858 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:L_Wing_01_Jnt|Penguin3:L_Wing_02_Jnt" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:L_Wing_01_Jnt|Penguin3:L_Wing_02_Jnt" 
@@ -29627,7 +29630,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:L_Wing_01_Jnt|Penguin3:L_Wing_01_Jnt_scaleConstraint1" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt" 
-		"translate" " -type \"double3\" -1.43991194268706835 -0.61967202283301503 -12.28520000000014534"
+		"translate" " -type \"double3\" -1.43991194268704348 -0.61967202283346978 -12.28519999999991796"
 		
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt" 
 		"translateX" " -av"
@@ -29636,7 +29639,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt|Penguin3:R_Wing_02_Jnt" 
-		"translate" " -type \"double3\" 13.46208145031147296 0 0"
+		"translate" " -type \"double3\" 13.46208145031133085 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt|Penguin3:R_Wing_02_Jnt" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt|Penguin3:R_Wing_02_Jnt" 
@@ -29644,7 +29647,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt|Penguin3:R_Wing_02_Jnt" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt|Penguin3:R_Wing_02_Jnt|Penguin3:R_Wing_03_Jnt" 
-		"translate" " -type \"double3\" 16.81909963290661381 0 0"
+		"translate" " -type \"double3\" 16.81909963290665644 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt|Penguin3:R_Wing_02_Jnt|Penguin3:R_Wing_03_Jnt" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Skeleton|Penguin3:COG_Jnt|Penguin3:Spine_01_Jnt|Penguin3:Spine_02_Jnt|Penguin3:Spine_03_Jnt|Penguin3:R_Wing_01_Jnt|Penguin3:R_Wing_02_Jnt|Penguin3:R_Wing_03_Jnt" 
@@ -31578,8 +31581,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_02_Jnt_Ctrl_Grp" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_02_Jnt_Ctrl_Grp|Penguin3:Spine_02_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -3.56372893491611675 21.29124100735876368 -1.88863850955383783"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_02_Jnt_Ctrl_Grp|Penguin3:Spine_02_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_02_Jnt_Ctrl_Grp|Penguin3:Spine_02_Jnt_Ctrl" 
@@ -31603,8 +31605,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_02_Jnt_Ctrl_Grp|Penguin3:Spine_02_Jnt_Ctrl_Grp_parentConstraint2" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_03_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" 0.17631971115338274 20.71631402003046318 0.18794054794136628"
-		
+		"translate" " -type \"double3\" 0 20.72462761402130127 0.79966211319003833"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_03_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_03_Jnt_Ctrl_Grp" 
@@ -31630,8 +31631,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_03_Jnt_Ctrl_Grp|Penguin3:Spine_03_Jnt_Ctrl_Grp_parentConstraint2" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" 0.32483793101710035 28.61496123460477747 -0.099141627032167889"
-		
+		"translate" " -type \"double3\" 0 28.62775564193725586 0.98315334320102465"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp" 
@@ -31641,8 +31641,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp|Penguin3:Spine_04_Jnt_Ctrl" 
 		"visibility" " -av 1"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp|Penguin3:Spine_04_Jnt_Ctrl" 
-		"translate" " -type \"double3\" -0.52168900234130522 0.0074535673505667383 -0.46751576094412572"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp|Penguin3:Spine_04_Jnt_Ctrl" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp|Penguin3:Spine_04_Jnt_Ctrl" 
@@ -31650,8 +31649,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp|Penguin3:Spine_04_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp|Penguin3:Spine_04_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -6.84658056591924158 14.25229151187991583 4.12307877062009176"
-		
+		"rotate" " -type \"double3\" 10.46980245251668329 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp|Penguin3:Spine_04_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp|Penguin3:Spine_04_Jnt_Ctrl" 
@@ -31687,8 +31685,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Spine_04_Jnt_Ctrl_Grp|Penguin3:Spine_04_Jnt_Ctrl_Grp_parentConstraint2" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Neck_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" -0.9302560266690989 34.6562039325204978 -0.89236103031510083"
-		
+		"translate" " -type \"double3\" 0 34.56222838835560651 2.37499411456894904"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Neck_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Neck_Jnt_Ctrl_Grp" 
@@ -31706,7 +31703,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Neck_Jnt_Ctrl_Grp|Penguin3:Neck_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Neck_Jnt_Ctrl_Grp|Penguin3:Neck_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 3.14986374535375679 14.35190468739866354 0"
+		"rotate" " -type \"double3\" 8.66643718397262752 -12.83026719564832341 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Neck_Jnt_Ctrl_Grp|Penguin3:Neck_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Neck_Jnt_Ctrl_Grp|Penguin3:Neck_Jnt_Ctrl" 
@@ -31742,7 +31739,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:Neck_Jnt_Ctrl_Grp|Penguin3:Neck_Jnt_Ctrl_Grp_parentConstraint2" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" 11.3642221153219225 18.88362747486201343 -4.79756652412322637"
+		"translate" " -type \"double3\" 12.28518772125244141 19.29948550462722778 0.14673519134566959"
 		
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
@@ -31751,7 +31748,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp|Penguin3:L_Wing_01_Jnt_Ctrl" 
-		"translate" " -type \"double3\" 0 -0.57482125342944101 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp|Penguin3:L_Wing_01_Jnt_Ctrl" 
 		"translateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp|Penguin3:L_Wing_01_Jnt_Ctrl" 
@@ -31759,8 +31756,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp|Penguin3:L_Wing_01_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp|Penguin3:L_Wing_01_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -7.03310769302882921 0.80978985731820496 -44.93430145731369407"
-		
+		"rotate" " -type \"double3\" 0 0 -53.79689890116455331"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp|Penguin3:L_Wing_01_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp|Penguin3:L_Wing_01_Jnt_Ctrl" 
@@ -31784,7 +31780,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_01_Jnt_Ctrl_Grp|Penguin3:L_Wing_01_Jnt_Ctrl_Grp_parentConstraint2" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_02_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" 16.66143716851865975 5.94107745993142089 -4.41931583385121485"
+		"translate" " -type \"double3\" 15.35713963828891337 6.24533867703851264 1.32153916359004597"
 		
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_02_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
@@ -31803,7 +31799,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_02_Jnt_Ctrl_Grp|Penguin3:L_Wing_02_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_02_Jnt_Ctrl_Grp|Penguin3:L_Wing_02_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 -3.56123059585378821"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_02_Jnt_Ctrl_Grp|Penguin3:L_Wing_02_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_02_Jnt_Ctrl_Grp|Penguin3:L_Wing_02_Jnt_Ctrl" 
@@ -31839,7 +31835,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_02_Jnt_Ctrl_Grp|Penguin3:L_Wing_02_Jnt_Ctrl_Grp_parentConstraint2" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_03_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" 21.74807110551944334 -10.09022248529282351 -4.34773088182328138"
+		"translate" " -type \"double3\" 18.97211119311134553 -10.17619296916885219 1.70471823215541463"
 		
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_03_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
@@ -31848,7 +31844,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_03_Jnt_Ctrl_Grp" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_03_Jnt_Ctrl_Grp|Penguin3:L_Wing_03_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 -8.37189718215009471"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_03_Jnt_Ctrl_Grp|Penguin3:L_Wing_03_Jnt_Ctrl" 
 		"rotateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_03_Jnt_Ctrl_Grp|Penguin3:L_Wing_03_Jnt_Ctrl_Grp_parentConstraint1" 
@@ -31868,7 +31864,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:L_Wing_03_Jnt_Ctrl_Grp|Penguin3:L_Wing_03_Jnt_Ctrl_Grp_parentConstraint2" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_01_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" -11.51672050875902187 19.63812583501222875 4.12415694338722005"
+		"translate" " -type \"double3\" -12.28519999999991796 19.29948699676513613 0.14673482809496363"
 		
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_01_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
@@ -31877,7 +31873,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_01_Jnt_Ctrl_Grp" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_01_Jnt_Ctrl_Grp|Penguin3:R_Wing_01_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" -3.13891057075486701 0 -40.15293824651472931"
+		"rotate" " -type \"double3\" 0 0 -56.56397240451775588"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_01_Jnt_Ctrl_Grp|Penguin3:R_Wing_01_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_01_Jnt_Ctrl_Grp|Penguin3:R_Wing_01_Jnt_Ctrl" 
@@ -31901,7 +31897,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_01_Jnt_Ctrl_Grp|Penguin3:R_Wing_01_Jnt_Ctrl_Grp_parentConstraint2" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_02_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" -16.79904800896144934 8.01368837981759263 8.38996366728963494"
+		"translate" " -type \"double3\" -14.72336549897124769 6.11226509311818944 1.32153882809495826"
 		
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_02_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
@@ -31920,7 +31916,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_02_Jnt_Ctrl_Grp|Penguin3:R_Wing_02_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_02_Jnt_Ctrl_Grp|Penguin3:R_Wing_02_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 -1.98150419631461472"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_02_Jnt_Ctrl_Grp|Penguin3:R_Wing_02_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_02_Jnt_Ctrl_Grp|Penguin3:R_Wing_02_Jnt_Ctrl" 
@@ -31956,7 +31952,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_02_Jnt_Ctrl_Grp|Penguin3:R_Wing_02_Jnt_Ctrl_Grp_parentConstraint2" 
 		"translateZ" " -k 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_03_Jnt_Ctrl_Grp" 
-		"translate" " -type \"double3\" -23.0796859504304166 -7.03655128075185132 12.50408394618830243"
+		"translate" " -type \"double3\" -17.54137432844061095 -10.46464995620966931 1.70471782809511296"
 		
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_03_Jnt_Ctrl_Grp" 
 		"translateX" " -av"
@@ -31975,7 +31971,7 @@ createNode reference -n "PenguinRN2";
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_03_Jnt_Ctrl_Grp|Penguin3:R_Wing_03_Jnt_Ctrl" 
 		"translateZ" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_03_Jnt_Ctrl_Grp|Penguin3:R_Wing_03_Jnt_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 -5.78689326297812467"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_03_Jnt_Ctrl_Grp|Penguin3:R_Wing_03_Jnt_Ctrl" 
 		"rotateX" " -av"
 		2 "|Penguin3:Penguin|Penguin3:Controls|Penguin3:Transform_Ctrl_Grp|Penguin3:Transform_Ctrl|Penguin3:RK|Penguin3:R_Wing_03_Jnt_Ctrl_Grp|Penguin3:R_Wing_03_Jnt_Ctrl" 
@@ -33247,8 +33243,7 @@ createNode animCurveTU -n "R_Leg_FK_01_Jnt_Ctrl_FollowRotate1";
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  149 0 150 0 155 0 161 0 166 0;
 select -ne :time1;
-	setAttr ".o" 175;
-	setAttr ".unw" 175;
+	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -33281,7 +33276,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 7 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "Transform_Ctrl_RLegIKFKSwitch.o" "PenguinRN1.phl[1]";
 connectAttr "Transform_Ctrl_LLegIKFKSwitch.o" "PenguinRN1.phl[2]";
 connectAttr "Transform_Ctrl_RFootIKFKSwitch.o" "PenguinRN1.phl[3]";
